@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500&family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Outfit:wght@500;600&family=Overpass:wght@500;700&family=Poppins:wght@500&family=Roboto:wght@500&family=Rubik:wght@400;500;700&family=Source+Sans+Pro:wght@600&display=swap');
+
+
+:root
+{
+
+ --buyer-txt:hsl(333, 80%, 67%);
+ --heading-txt :hsl(300, 43%, 22%);
+ --white-txt:hsl(0, 0%, 100%);
+ --main-pragh:hsl(303, 10%, 53%);
+ --star-bg:hsl(300, 24%, 96%);
+ --fw-400:400;
+ --fw--500:500;
+ --fw-700:700;
+
+}
+
+
+
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+ transition: 0.8s ;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+ margin: 0;
+}
+
+/* Remove list styles on ul, ol elements, which suggests default styling will be removed */
+ul,
+ol {
+ list-style: none;
+}
+
+/* Set core root defaults */
+html,
+html:focus-within {
+ scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+ min-height: 100vh;
+ text-rendering: optimizeSpeed;
+ line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+ text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+ max-width: 100%;
+ display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+ font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+ html,
+ html:focus-within {
+   scroll-behavior: auto;
+ }
+
+ *,
+ *::before,
+ *::after {
+   animation-duration: 0.01ms !important;
+   animation-iteration-count: 1 !important;
+   transition-duration: 0.01ms !important;
+   scroll-behavior: auto !important;
+ }
+}
+
+body
+{
+ font-family:"League Spartan";
+ background-color: var(--white-txt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/bg-pattern-top-desktop.svg);
+  background-position:initial;
+  background-origin: unset;
+  background-repeat: no-repeat;
+  
+}
+
+main
+{
+ background-color: transparent;
+ max-width: 75rem;
+ min-height: 35rem;
+ padding: 2rem;
+ border-radius: 1rem;
+}
+
+.infoContainer
+{
+ display: flex;
+ gap: 2rem;
+ margin-bottom: 2rem;
+ justify-content: space-between;
+}
+.info
+{
+ max-width: 25rem;
+ 
+}
+h1
+{
+ color: var(--heading-txt);
+ font-weight: var(--fw-700);
+ font-size: 2.9rem;
+ line-height: 1.5ch;
+ margin-bottom: 1rem;
+}
+.info > p
+{
+ color: var(--main-pragh);
+ margin-bottom: 1rem;
+}
+.state
+{
+ display: flex;
+ background-color: var(--star-bg);
+ margin-bottom: 1rem;
+ padding: 0.7rem;
+ border-radius: 0.4rem;
+ justify-content: space-around;
+ /* gap: 1rem; */
+}
+.state >p 
+{
+ color: var(--heading-txt);
+ font-weight: var(--fw-700);
+
+}
+.one 
+{
+ position: relative;
+ right: 12rem;
+}
+.two
+{
+ 
+  position: relative;
+  right: 6rem;
+}
+
+.stars
+{
+ max-width: 4rem;
+ display: flex;
+ margin-right: 2rem;
+ gap: 0.3rem;
+ margin-right: 3rem;
+ 
+}
+.stars img
+{
+ max-width: 0.9rem;
+ max-height: 0.9rem;
+}
+
+.reviews
+{
+ display: flex;
+ gap: 1rem;
+ 
+}
+.review
+{
+ padding: 2rem;
+ border-radius: 0.7rem;
+ background-color: var(--heading-txt);
+ color: var(--white-txt);
+ font-weight: var(--fw-400);
+ font-size: 0.97rem;
+ 
+
+}
+.reviewer
+{
+ display: flex;
+ gap: 1rem;
+ margin-bottom: 1rem;
+}
+.reviewer >img
+{
+ width: 3rem;
+ height: 3rem;
+ border-radius: 50%;
+}
+.reviwerInfo .name
+{
+ color: var(--white-txt);
+}
+.reviwerInfo .Verified
+{
+ color: var(--buyer-txt);
+}
+.review.second
+{ 
+ position: relative;
+ top: 1rem;
+}
+.review.three
+{
+ position: relative;
+ top: 2rem;
+}
+
+@media screen and (max-width:968px) {
+ 
+ body
+ {
+  display: block;
+  padding: 2rem;
+  
+ }
+ main
+ {
+  padding: 0;
+ }
+ .infoContainer
+ {
+  
+   display: block;
+   text-align: center;
+ }
+ .info
+ {
+  margin: auto;
+ }
+ .one 
+{
+ 
+ right: 0rem;
+}
+.two
+{
+ 
+  
+  right: 0rem;
+}
+.state
+{
+ display: block;
+ text-align: center;
+}
+.stars
+{
+  justify-content: center;
+  align-items: center;
+  margin:0 auto 0.8rem;
+}
+.reviews
+{
+ flex-direction: column;
+
+}
+}
